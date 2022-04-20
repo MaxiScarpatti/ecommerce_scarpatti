@@ -1,13 +1,14 @@
-import Footer from "./components/Footer"
 import Header from "./components/Header"
+import ItemListContainer from "./components/ItemListContainer"
 import Navbar from "./components/NavBar"
+
 
 const App = () => {
     return (
     <>
     <Header/>
     <Navbar/>
-    <Footer/>
+    <ItemListContainer greeting nombre="Juan"/>
     </>
     )
 }
