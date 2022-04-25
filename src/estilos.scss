@@ -40,3 +40,17 @@
     }
   }
   
+  .contador {
+    margin: 30px;
+    background-color: beige;
+    width: 30%;
+  }
+  .contador p {
+    text-align: center;
+  }
+  .contador button{
+    flex-wrap: nowrap;
+    width: 135px;
+    height: 50px;
+    border-radius: 5px;
+  }
