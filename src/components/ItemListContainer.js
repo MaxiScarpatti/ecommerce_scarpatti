@@ -51,7 +51,7 @@ useEffect(()=> {
     <div className="person">
       <h3>Hola {greeting.nombre}</h3>
       <ItemList productos={productos} />
-      <ItemCount init={1} stock={10} onAdd={()=>{}}/>
+      <ItemCount initial={1} stock={10} onAdd={()=>{}}/>
     </div>
     </>
   
