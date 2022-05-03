@@ -2,7 +2,7 @@ import Header from "./components/Header"
 import ItemListContainer from "./components/ItemListContainer"
 import Navbar from "./components/NavBar"
 import './estilos.scss'
-import {BrowserRouter} from "react-router-dom";
+import ItemDetailContainer from "./components/ItemDetailContainer";
     
 
 
@@ -12,6 +12,7 @@ const App = () => {
     <Header/>
     <Navbar/>
     <ItemListContainer greeting nombre="Juan"/>
+    <ItemDetailContainer/>
     </>
     )
 }
