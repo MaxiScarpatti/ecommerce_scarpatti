@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import ItemDetail from './ItemDetail'
 
 const productosIniciales = [
     {
@@ -39,7 +40,7 @@ useEffect(() => {
   pedido.then(()=> {
     console.log("Termino el pedido bien")
     setCargando(false)
-    setProductos(productosIniciales)
+    setProducto(productosIniciales)
   })
 },[])
   if(cargando){
@@ -50,8 +51,7 @@ useEffect(() => {
     return (
     <>
    <ItemDetail/>
-    </div>
     </>
-)}
+)}}
 
 export default ItemDetailContainer
