@@ -43,17 +43,20 @@
   .contador {
     margin: 30px;
     background-color: beige;
-    width: 30%;
+    width: 275px;
   }
   .contador p {
     text-align: center;
+    font-size: 13;
   }
   .contador button{
-    flex-wrap: nowrap;
-    width: 135px;
-    height: 50px;
+    width: 75px;
+    height: 40px;
     border-radius: 5px;
-  }
+    flex-direction: column;
+    font-size: 12px;
+    
+  } 
 
   .card-container{
     display: grid;
@@ -68,5 +71,4 @@
 article img{
   width: 400px;
 }
-  
   

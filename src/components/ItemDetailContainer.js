@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 
 export const productosIniciales = [
@@ -33,17 +34,19 @@ export const productosIniciales = [
 
 const ItemDetailContainer = () => {
   const [cargando, setCargando] = useState(true);
-  const [producto, setProducto] = useState({});
+  const [producto, setProducto] = useState([]);
+  const { id } = useParams()
 
   useEffect(() => {
     const pedidoContenido = new Promise((res) => {
       setTimeout(() => {
-        res([productosIniciales]);
+        res(productosIniciales.find(e => e.id == id))
+        setCargando(true);
       }, 2000);
     });
 
     pedidoContenido.then(() => {
-      console.log("Termino el pedido bien");
+      //console.log("Termino el pedido bien");
       setCargando(false);
       setProducto(productosIniciales);
     });
@@ -54,8 +57,8 @@ const ItemDetailContainer = () => {
     return (
       <>
         <ItemDetail key={producto.id} producto={producto} />
-        />
       </>
+       
     );
   }
 };

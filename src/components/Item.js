@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Item = ({ producto }) => {
   //const [detalles, setDetalles] = useState(false);
-
   //const detallesProductos = () => {
    // console.log(producto.id);
   //  setDetalles(true);
