@@ -18,7 +18,7 @@ const Item = ({ producto }) => {
       />
       <p>Precio : $ {producto.precio}</p>
       <Link
-        to={`/item/${producto.id}`}
+        to={`/planta/${producto.id}`}
         key={producto.id}
         className="botonSuma btn-primary"
       >

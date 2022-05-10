@@ -40,15 +40,18 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const pedidoContenido = new Promise((res) => {
       setTimeout(() => {
-        res(productosIniciales.find(e => e.id == id))
-        setCargando(true);
+        let productoFiltrado = productosIniciales.find(e => e.id == id)
+        console.log(productoFiltrado)
+        res(productoFiltrado)
+        
+        //setCargando(true);
       }, 2000);
     });
 
-    pedidoContenido.then(() => {
+    pedidoContenido.then((data) => {
       //console.log("Termino el pedido bien");
       setCargando(false);
-      setProducto(productosIniciales);
+      setProducto(data);
     });
   }, []);
   if (cargando) {

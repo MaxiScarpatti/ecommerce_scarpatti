@@ -3,7 +3,7 @@ import ItemListContainer from "./components/ItemListContainer"
 import Navbar from "./components/NavBar"
 import './estilos.scss'
 import ItemDetailContainer from "./components/ItemDetailContainer"
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 
 
@@ -13,8 +13,12 @@ const App = () => {
     <BrowserRouter>
     <Header/>
     <Navbar/>
-    <ItemListContainer greeting nombre="Juan"/>
-    <ItemDetailContainer/>
+    <Routes>
+        <Route path="/" element={<ItemListContainer/>}/>
+        <Route path="/planta/:id" element={<ItemDetailContainer/>}/>
+        <Route path="/plantas/categoria/:id" element={<ItemListContainer/>}/>
+        {/* <Route path="/contacto" element={<Contacto/>}/> */}
+    </Routes>
     </BrowserRouter>
     </>
     )
