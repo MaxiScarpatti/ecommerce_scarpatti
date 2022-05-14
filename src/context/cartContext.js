@@ -31,16 +31,20 @@ export const CustomProvider = ({ defaultValue = [], children }) => {
     return cart.find((e) => e.item.id === id);
   };
 
-const removeItem = ( id ) => {
-    const newCart = [...cart].map(element => element.id !== id)
+  const removeItem = (id) => {
+    const newCart = [...cart].map((element) => element.id !== id);
     setCart(newCart);
-}
+  };
 
-const clearCart = () => {
+  const clearCart = () => {
     setCart([]);
-}
+  };
 
-  return <Provider value={{ cart, addItem, clearCart, removeItem }}>{children}</Provider>;
+  return (
+    <Provider value={{ cart, addItem, clearCart, removeItem }}>
+      {children}
+    </Provider>
+  );
 };
 
 export default cartContext;

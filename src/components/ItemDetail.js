@@ -3,15 +3,23 @@ import ItemCount from "./ItemCount"
 import{Link } from 'react-router-dom'
 import cartContext from "../context/cartContext";
 
-const ItemDetail = ({producto, item}) => {
+const ItemDetail = ({producto}) => {
 
   const [cartItems, setCartItems] = useState(0)
   const { AddItem } = useContext(cartContext)
-
+  
   const onAdd = (quantity) => {
     setCartItems(quantity)
-    AddItem(item, quantity)
+    AddItem(producto, quantity)
   }
+
+  // let compraRealizada = ''
+  // if (onAdd){
+  //   compraRealizada = ItemCount
+  // } else{
+  //   compraRealizada = <button>Ir al carrito</button>
+  // }
+
         return (
           <article className="cardDetail"> 
               <h1>Detalle del producto</h1>
@@ -21,9 +29,9 @@ const ItemDetail = ({producto, item}) => {
               <p>Stock disponible : {producto.stock}</p>
               <p>Codigo de producto : {producto.id}</p>
               <p>Categoria : {producto.categorias}</p>
-              <ItemCount stock={producto.stock} initial={1} onAdd={onAdd}/>
               <button>
-              <Link to="/" className="botonSuma btn-primary">Finalizar Compra</Link>
+              {cartItems >= 1 ? <Link to="/cart" className="botonSuma btn-primary">Finalizar Compra</Link> : 
+              <ItemCount stock={producto.stock} initial={1} onAdd={onAdd}/> }
               </button>
           </article> )
   }
