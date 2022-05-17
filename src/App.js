@@ -5,6 +5,7 @@ import "./estilos.scss";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomProvider } from "./context/cartContext";
+import Cart from "./components/Cart";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
               element={<ItemListContainer />}
             />
             {/* <Route path="/contacto" element={<Contacto/>}/> */}
+            <Route path="/cart" element={<Cart/>}/> 
           </Routes>
         </BrowserRouter>
       </CustomProvider>

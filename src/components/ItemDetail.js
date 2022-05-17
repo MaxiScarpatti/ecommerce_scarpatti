@@ -6,11 +6,11 @@ import cartContext from "../context/cartContext";
 const ItemDetail = ({producto}) => {
 
   const [cartItems, setCartItems] = useState(0)
-  const { AddItem } = useContext(cartContext)
+  const { addItem } = useContext(cartContext)
   
   const onAdd = (quantity) => {
     setCartItems(quantity)
-    AddItem(producto, quantity)
+    addItem(producto, quantity)
   }
 
   // let compraRealizada = ''
