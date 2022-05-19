@@ -8,8 +8,7 @@ const productosIniciales = [
     id: 1,
     nombre: "Suculenta con flores",
     precio: 50,
-    imagen:
-      "https://cdn.pixabay.com/photo/2020/03/31/12/43/spring-4987508_960_720.jpg",
+    imagen: "https://cdn.pixabay.com/photo/2020/03/31/12/43/spring-4987508_960_720.jpg",
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "suculentas",
@@ -29,7 +28,7 @@ const productosIniciales = [
     nombre: "Rosa tipo bicolor",
     precio: 80,
     imagen:
-      "https://cdn.pixabay.com/photo/2020/03/31/12/43/spring-4987508_960_720.jpg",
+      "https://t2.ev.ltmcdn.com/es/posts/2/2/9/rosa_del_desierto_adenium_obesum_2922_0_600.webp",
     descripcion:
       "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "rosas",

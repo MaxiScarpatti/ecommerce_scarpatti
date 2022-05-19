@@ -9,7 +9,7 @@ import Cart from "./components/Cart";
 
 const App = () => {
   return (
-    <>
+    
       <CustomProvider>
         <BrowserRouter>
           <Header />
@@ -22,11 +22,11 @@ const App = () => {
               element={<ItemListContainer />}
             />
             {/* <Route path="/contacto" element={<Contacto/>}/> */}
-            <Route path="/cart" element={<Cart/>}/> 
+            <Route path="/Cart" element={<Cart/>}/> 
           </Routes>
         </BrowserRouter>
       </CustomProvider>
-    </>
+    
   );
 };
 

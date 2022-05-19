@@ -1,11 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import cartContext from "../context/cartContext";
 import ItemDetail from "./ItemDetail";
 
 const Cart = () => {
   const { precio_total, carrito, vaciarCarrito } = useContext(cartContext);
-  const handleClick = () =>{}
+  const [orders, setOrders] = useState(carrito);
+  const handleClick = () => {};
   
+  useEffect(() => {
+    setOrders(carrito);
+  }, [carrito]);
+
+  
+
   if (carrito.length === 0) {
     return (
       <section className="cart">
