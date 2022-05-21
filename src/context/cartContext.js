@@ -40,8 +40,11 @@ export const CustomProvider = ({ defaultValue = [], children }) => {
     setCart([]);
   };
 
+
   return (
-    <Provider value={{ isInCart, addItem, clearCart, removeItem }}>
+    <Provider
+      value={{ isInCart, addItem, clearCart, removeItem }}
+    >
       {children}
     </Provider>
   );

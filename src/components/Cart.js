@@ -3,17 +3,11 @@ import cartContext from "../context/cartContext";
 import ItemDetail from "./ItemDetail";
 
 const Cart = () => {
-  const { precio_total, carrito, vaciarCarrito } = useContext(cartContext);
-  const [orders, setOrders] = useState(carrito);
+  const { setCart, isInCart, addItem, clearCart, removeItem } = useContext(cartContext);
+  
   const handleClick = () => {};
   
-  useEffect(() => {
-    setOrders(carrito);
-  }, [carrito]);
-
-  
-
-  if (carrito.length === 0) {
+   if (isInCart.length === 0) {
     return (
       <section className="cart">
         <h2>Tu carrito está vacío</h2>
@@ -21,13 +15,13 @@ const Cart = () => {
     );
   }
 
-  return (
+  else (
     <div>
       <h1>Carrito</h1>
-      {carrito.map((producto) => {
+      {isInCart.map((producto) => {
         return <ItemDetail key={producto.id} {...producto} />;
       })}
-      <h2>Precio total: ${precio_total}</h2>
+      <h2>Precio total: ${setCart}</h2>
       <button onClick={handleClick}>Click</button>
     </div>
   );
