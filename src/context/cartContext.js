@@ -32,7 +32,7 @@ export const CustomProvider = ({ defaultValue = [], children }) => {
   };
 
   const removeItem = (id) => {
-    const newCart = [...cart].map((element) => element.id !== id);
+    const newCart = [...cart].map((element) => element.item.id !== id);
     setCart(newCart);
   };
 
@@ -42,11 +42,11 @@ export const CustomProvider = ({ defaultValue = [], children }) => {
 
 
   return (
-    <Provider
+    <cartContext.Provider
       value={{ isInCart, addItem, clearCart, removeItem }}
     >
       {children}
-    </Provider>
+    </cartContext.Provider>
   );
 };
 
